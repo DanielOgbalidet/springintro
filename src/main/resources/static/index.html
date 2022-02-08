@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iSpring intro</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+
+        function hallo() {
+            const url = "/?navn=" + $("#innNavn").val();
+
+            $.get(url, function(data) {
+                $("#ut").html(data);
+            });
+        }
+
+    </script>
+</head>
+<body>
+
+Skriv inn navn: <input type="text" id="innNavn"/>
+
+<button onclick="hallo();">Trykk her</button>
+
+<div id="ut"></div>
+
+</body>
+</html>
